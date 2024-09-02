@@ -4,7 +4,7 @@
   "scripts": {
     "ng": "ng",
     "start": "ng serve",
-    "build": "ng build",
+    "build": "node ./build.js",
     "watch": "ng build --watch --configuration development",
     "test": "ng test",
     "serve:ssr:AngularWordpressApp": "node dist/angular-wordpress-app/server/server.mjs"
@@ -23,8 +23,7 @@
     "@angular/ssr": "^18.2.2",
     "express": "^4.18.2",
     "rxjs": "~7.8.0",
-    "tslib": "^2.3.0",
-    "zone.js": "~0.14.10"
+    "tslib": "^2.3.0"
   },
   "devDependencies": {
     "@angular-devkit/build-angular": "^18.2.2",
