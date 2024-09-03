@@ -31,7 +31,9 @@ Vagrant.configure("2") do |config|
                       unzip -y
 
      sudo mkdir -p /srv/www
-     sudo chown www-data: /srv/www
+     sudo chown www-data:www-data /srv/www
+     sudo chmod 755 /srv/www
+
      curl https://wordpress.org/latest.tar.gz | sudo -u www-data tar zx -C /srv/www
 
      cat > /etc/apache2/sites-available/wordpress.conf <<EOF
@@ -84,7 +86,7 @@ EOF
     # Skopiuj wtyczkę AngularWordpressApp
     # rm -rf /srv/www/wordpress/wp-content/plugins/*
     # cp -r /vagrant/AngularWordpressPlugin/plugin/* /srv/www/wordpress/wp-content/plugins/
-
+    sudo chown -R www-data:www-data /srv/www/wordpress/wp-content/plugins/
     # Aktywacja wtyczki
     sudo -u www-data wp plugin activate AngularWordpressApp --path=/srv/www/wordpress --allow-root
 
