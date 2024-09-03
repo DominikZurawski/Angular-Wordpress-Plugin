@@ -15,13 +15,4 @@ body {
     background-color: #f18973;
   }
 
-  nav a {
-    margin-right: 15px;
-    cursor: pointer;
-    text-decoration: none;
-    color: blue;
-  }
 
-  nav a:hover {
-    text-decoration: underline;
-  }

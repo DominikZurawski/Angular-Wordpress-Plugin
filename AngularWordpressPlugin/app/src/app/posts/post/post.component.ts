@@ -1,5 +1,5 @@
 import { Component, OnInit, Inject, Renderer2, ElementRef } from '@angular/core';
-import { PostService } from '../post.service';
+import { PostService } from '../../post.service';
 import { CommonModule, isPlatformBrowser } from '@angular/common';
 import { PLATFORM_ID } from '@angular/core';
 

@@ -1,6 +1,7 @@
 {
   "routes": [
     "/",
+    "/crud",
     "/post",
     "/user"
   ]

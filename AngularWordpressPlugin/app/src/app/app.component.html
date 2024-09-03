@@ -1,8 +1,7 @@
-<h1>Hello WordPress!</h1>
-<nav>
-    <a routerLink="/">Home</a>
-    <a routerLink="/user">User</a>
-    <a routerLink="/post">Posts</a>
-</nav>
-<router-outlet></router-outlet>
-<app-post></app-post>
+<ng-container *ngIf="showPosts">
+    <app-posts></app-posts>
+  </ng-container>
+
+  <ng-container *ngIf="showCrud">
+    <crud-root></crud-root>
+  </ng-container>

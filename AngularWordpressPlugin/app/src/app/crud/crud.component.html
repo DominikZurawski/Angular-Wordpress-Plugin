@@ -1,0 +1,22 @@
+<div>
+    <h2>Items</h2>
+    <div id="items-container">
+      <div *ngFor="let item of items">
+        <p>{{ item.name }}: {{ item.value }}</p>
+        <button (click)="deleteItem(item.id)">Delete</button>
+        <button (click)="updateItem(item)">Update</button>
+      </div>
+    </div>
+  </div>
+  <div *ngIf="items.length === 0">
+    <p>No items available.</p>
+  </div>
+
+  <h3>Add New Item</h3>
+  <form (ngSubmit)="addItem()">
+    <label for="name">Name:</label>
+    <input id="name" [(ngModel)]="newItem.name" name="name" required>
+    <label for="value">Value:</label>
+    <input id="value" [(ngModel)]="newItem.value" name="value" required>
+    <button type="submit">Add</button>
+  </form>
